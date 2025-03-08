@@ -1,0 +1,38 @@
+
+Instrukcja uruchomienia aplikacji do analizy pliku PDF
+
+1. Zainstaluj Node.js:
+   - Aplikacja jest napisana w Node.js, dlatego musisz mieć zainstalowanego Node.js. 
+   - Pobierz Node.js z oficjalnej strony (https://nodejs.org/) i zainstaluj na swoim komputerze.
+
+2. Przygotowanie pliku PDF:
+   - Skopiuj plik PDF, który chcesz przeanalizować, do folderu src/files w projekcie. Plik musi mieć nazwę file.pdf.
+
+3. Instalacja zależności:
+   - Otwórz terminal lub wiersz poleceń i przejdź do katalogu, w którym znajduje się projekt. Możesz to zrobić na kilka sposobów:
+     - Windows: Wejdź do folderu projektu w Eksploratorze plików, kliknij prawym przyciskiem myszy na pustym miejscu w folderze i wybierz opcję „Otwórz w terminalu” lub „Otwórz okno poleceń tutaj”.
+     - macOS/Linux: Otwórz terminal i użyj komendy cd, aby przejść do folderu z projektem:
+       cd /ścieżka/do/projektu
+   - Następnie zainstaluj wszystkie niezbędne zależności, wpisując:
+     npm install
+     (Ta komenda pobierze wszystkie paczki wymagane do działania aplikacji).
+
+4. Uruchomienie aplikacji:
+   - Teraz możesz uruchomić aplikację, wpisując w terminalu:
+     npm run dev
+     To spowoduje uruchomienie aplikacji i rozpoczęcie analizy pliku PDF.
+
+5. Wyniki analizy:
+   - Po zakończeniu analizy, aplikacja wygeneruje plik CSV zawierający wszystkie znalezione adresy e-mail oraz tekst znajdujący się po każdym z nich.
+   - Plik wynikowy emails.csv znajdziesz w folderze output. Będzie on zawierał dane w formacie:
+     page_number;email;info
+     - page_number – numer strony, na której znaleziono e-mail
+     - email – znaleziony adres e-mail
+     - info – tekst znajdujący się w następnej linii po adresie e-mail
+
+Podsumowanie:
+1. Zainstaluj Node.js.
+2. Umieść plik file.pdf w folderze src/files.
+3. Zainstaluj zależności za pomocą npm install.
+4. Uruchom aplikację za pomocą npm run dev.
+5. Sprawdź wyniki w pliku output/emails.csv.
