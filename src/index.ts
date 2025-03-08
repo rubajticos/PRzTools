@@ -37,7 +37,7 @@ function processPage(page: PdfPage): Promise<PageAnalyseResult> {
 
 
 async function main() {
-  const pdfPath = path.join(__dirname, 'files', 'book_of_abstracts.pdf');
+  const pdfPath = path.join(__dirname, 'files', 'file.pdf');
   const pdfPages = await readPdf(pdfPath);
 
   const pageResults = await Promise.all(pdfPages.map(processPage));
